@@ -17,12 +17,24 @@ class MyApp extends StatelessWidget {
           ),
           body: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text('เพิ่มข้อมูล การวางแนวแบบ Column 1',style: TextStyle(fontSize: 20),),
-                Text('เพิ่มข้อมูล การวางแนวแบบ Column 2',style: TextStyle(fontSize: 20),),
-                Text('เพิ่มข้อมูล การวางแนวแบบ Column 3',style: TextStyle(fontSize: 20),),
-                Text('เพิ่มข้อมูล การวางแนวแบบ Column 4',style: TextStyle(fontSize: 20),)
-
+                Text(
+                  'เพิ่มข้อมูล การวางแนวแบบ Column 1',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'เพิ่มข้อมูล การวางแนวแบบ Column 2',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'เพิ่มข้อมูล การวางแนวแบบ Column 3',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'เพิ่มข้อมูล การวางแนวแบบ Column 4',
+                  style: TextStyle(fontSize: 20),
+                )
               ],
             ),
           )),
