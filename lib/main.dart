@@ -16,10 +16,16 @@ class MyApp extends StatelessWidget {
             ),
           ),
           body: Center(
-              child: Image(
-            image: NetworkImage(
-                "https://blog.photofeeler.com/wp-content/uploads/2017/09/tinder-photo-size-tinder-picture-size-tinder-aspect-ratio-image-dimensions-crop.jpg"),
-          ))),
+            child: Column(
+              children: <Widget>[
+                Text('เพิ่มข้อมูล การวางแนวแบบ Column 1',style: TextStyle(fontSize: 20),),
+                Text('เพิ่มข้อมูล การวางแนวแบบ Column 2',style: TextStyle(fontSize: 20),),
+                Text('เพิ่มข้อมูล การวางแนวแบบ Column 3',style: TextStyle(fontSize: 20),),
+                Text('เพิ่มข้อมูล การวางแนวแบบ Column 4',style: TextStyle(fontSize: 20),)
+
+              ],
+            ),
+          )),
       theme: ThemeData(primaryColor: Colors.redAccent),
     );
   }
