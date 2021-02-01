@@ -7,38 +7,41 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "MY app",
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              'Hello Flutter',
-            ),
+    return MaterialApp(title: "MY app", home: MyHomePage());
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'โปรแกรมรับเลข',
           ),
-          body: Center(
+        ),
+        body: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Text(
-                  'เพิ่มข้อมูล การวางแนวแบบ Column 1',
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  'เพิ่มข้อมูล การวางแนวแบบ Column 2',
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  'เพิ่มข้อมูล การวางแนวแบบ Column 3',
-                  style: TextStyle(fontSize: 20),
-                ),
-                Text(
-                  'เพิ่มข้อมูล การวางแนวแบบ Column 4',
-                  style: TextStyle(fontSize: 20),
-                )
-              ],
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'เพิ่มข้อมูล การวางแนวแบบ Column 1',
+              style: TextStyle(fontSize: 20),
             ),
-          )),
-      theme: ThemeData(primaryColor: Colors.redAccent),
-    );
+            Text(
+              'Hello dart',
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              'Hello Flutter',
+              style: TextStyle(fontSize: 20),
+            )
+          ],
+        )));
   }
 }
