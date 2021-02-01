@@ -7,7 +7,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "MY app", home: MyHomePage());
+    return MaterialApp(
+      title: "MY app",
+      home: MyHomePage(),
+      theme: ThemeData(primaryColor: Colors.red),
+    );
   }
 }
 
@@ -17,6 +21,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int number = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,18 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'เพิ่มข้อมูล การวางแนวแบบ Column 1',
-              style: TextStyle(fontSize: 20),
+              'กดปุ่มเพื่อเพิ่มจำนวนตัวเลข',
+              style: TextStyle(fontSize: 30),
             ),
-            Text(
-              'Hello dart',
-              style: TextStyle(fontSize: 20),
-            ),
-            Text(
-              'Hello Flutter',
-              style: TextStyle(fontSize: 20),
-            )
+            Text('$number', style: TextStyle(fontSize: 60))
           ],
-        )));
+        )),
+        floatingActionButton:
+            FloatingActionButton(onPressed: addNumber, child: Icon(Icons.add)));
+  }
+
+  void addNumber() {
+    setState(() {
+      number++;
+    });
   }
 }
