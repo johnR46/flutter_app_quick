@@ -25,25 +25,35 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> data = [];
+    data.add(Text(
+      'กดปุ่มเพื่อเพิ่มจำนวนตัวเลข',
+      style: TextStyle(fontSize: 30),
+    ));
+    data.add(Text('$number', style: TextStyle(fontSize: 60)));
+    for (var i = 0; i < 10; i++) {
+      data.add(Text(
+        'ข้อความที่่ -> $i',
+        style: TextStyle(fontSize: 30),
+      ));
+    }
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'โปรแกรมรับเลข',
+            'โปรแกรมนับเลข',
           ),
         ),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'กดปุ่มเพื่อเพิ่มจำนวนตัวเลข',
-              style: TextStyle(fontSize: 30),
-            ),
-            Text('$number', style: TextStyle(fontSize: 60))
-          ],
+          children: data,
         )),
-        floatingActionButton:
-            FloatingActionButton(onPressed: addNumber, child: Icon(Icons.add)));
+        floatingActionButton: FloatingActionButton(
+            onPressed: addNumber,
+            child: Icon(
+              Icons.add,
+              color: Colors.black87,
+            )));
   }
 
   void addNumber() {
